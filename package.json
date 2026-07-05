@@ -1,0 +1,30 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "this is reactjs app by kuldeep jain",
+  "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuldeepjain84/namaste-react.git"
+  },
+  "author": "kuldeep jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuldeepjain84/namaste-react/issues"
+  },
+  "homepage": "https://github.com/kuldeepjain84/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
