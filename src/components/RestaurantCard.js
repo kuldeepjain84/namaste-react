@@ -1,8 +1,9 @@
 import { CDN_URL } from "../utils/constants";
+import useOnline from "../utils/useOnline";
 
 const CardContainer = ({resData}) => {
     const {name, locality, avgRating, sla, cloudinaryImageId} = resData;
-
+  
     return (
         <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
             <img className="res-logo" alt="dominoz" src={ CDN_URL + cloudinaryImageId} />

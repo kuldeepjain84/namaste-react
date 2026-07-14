@@ -61,6 +61,7 @@ import CardContainer from "./RestaurantCard";
 import { useState, useEffect, useRef, useCallback } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -79,6 +80,8 @@ const Body = () => {
         fetchInitialData();
     }, []);
 
+    const onlineStatus = useOnline();
+    
     const fetchInitialData = async () => {
         try {
             const response = await fetch(
@@ -193,7 +196,7 @@ const Body = () => {
         );
         setFilteredRestro(locallyFiltered);
     };
-
+    if(onlineStatus === false) return <h1>No internet connection, please check your internet connection</h1>;
     return (
         <div className="body">
             <div className="search-container">
